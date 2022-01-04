@@ -85,7 +85,7 @@ export class Tree<T = {}> extends React.Component<TreeProps<T>> {
         return Tree as new (props: TreeProps<U>) => Tree<U>;
     }
 
-    public static nodeFromPath<U>(path: number[], treeNodes?: Array<TreeNodeInfo<U>>): TreeNodeInfo<U> {
+    public static nodeFromPath<U>(path: (string | number)[], treeNodes?: Array<TreeNodeInfo<U>>): TreeNodeInfo<U> {
         if (path.length === 1) {
             return treeNodes![path[0]];
         } else {
